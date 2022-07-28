@@ -81,7 +81,7 @@ export function selectionToDOM(view, force) {
 // between non-editable block nodes. We briefly make something
 // editable, set the selection, then set it uneditable again.
 
-const brokenSelectBetweenUneditable = browser.safari || browser.chrome && browser.chrome_version < 63
+const brokenSelectBetweenUneditable = browser.safari || browser.chrome
 
 function temporarilyEditableNear(view, pos) {
   let {node, offset} = view.docView.domFromPos(pos, 0)
